@@ -10,7 +10,7 @@ Criar um programa que utilize essa função.
 
 public class FuncaoMaiorNumero{
 
-    public static void main(String[] args) {
+    public static void main(String[] args) {        
         Scanner s = new Scanner(System.in);
 
         double n1 = s.nextDouble();
