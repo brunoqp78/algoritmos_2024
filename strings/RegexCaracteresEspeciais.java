@@ -86,12 +86,27 @@ public class RegexCaracteresEspeciais {
         System.out.println("Resposta = " + leitura.matches(mascara));
 
         // Verificar se uma String contém apenas letras de a - f
-        mascara = "[a-f A-F 0-9]+";
-        System.out.println
-        leitura = s.nextLine();
+        mascara = "[a-f A-F]+";        
+        leitura = "abcde";
         System.out.println("Resposta = " + leitura.matches(mascara));
 
+        // Verificar se um CEP  está em um dos dois formatos válidos
+        mascara = "(\\d{5}-\\d{3})|(\\d{8})";
+        leitura = "38400-000";
+        System.out.println("Resposta = " + leitura.matches(mascara));
+        
+        // Verificar se uma String contém a palavra IFTM pelo menos uma vez.
+        mascara = "\\w*(IFTM)+\\w*";
+        leitura = "IFTM";
+        System.out.println("Resposta = " + leitura.matches(mascara));        
+
+        // Verificar se uma String contém uma sequencia de (NN)(NN) no inicio do texto
+        mascara = "^((\\(\\d{2}\\))+)\\w*";
+        leitura = s.nextLine();
+        System.out.println("Resposta = " + leitura.matches(mascara));        
+
         s.close();
+
     }
 
 }
