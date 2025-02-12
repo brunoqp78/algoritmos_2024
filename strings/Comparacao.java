@@ -7,6 +7,7 @@ public class Comparacao {
         Scanner s = new Scanner(System.in);
         String s1 = s.nextLine();
         String s2 = s.nextLine();
+        
         if (s1.equals(s2)){
             System.out.println("iguais");
         }else{
